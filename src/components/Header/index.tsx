@@ -4,7 +4,7 @@ import {
   SlDrawer,
   SlTooltip,
 } from "@shoelace-style/shoelace/dist/react";
-import BurgerIcon from "/shoelace/dist/assets/icons/list.svg";
+import BurgerIcon from "@shoelace-style/shoelace/dist/assets/icons/list.svg";
 import { CSSProperties, useRef } from "react";
 
 const Header: React.FC<{
