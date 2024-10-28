@@ -4,7 +4,7 @@ import {
   SlDrawer,
   SlTooltip,
 } from "@shoelace-style/shoelace/dist/react";
-import BurgerIcon from "/shoelace/dist/assets/icons/list.svg";
+
 import { CSSProperties, useRef } from "react";
 
 const Header: React.FC<{
@@ -65,7 +65,7 @@ const Header: React.FC<{
               drawerRef.current.show();
             }}
           >
-            <img src={BurgerIcon} height={"18px"} width={"18px"} />
+            <img src={"/shoelace/dist/assets/icons/list.svg"} height={"18px"} width={"18px"} />
           </button>
         </div>
       </div>
