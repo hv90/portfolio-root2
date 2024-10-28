@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ["/shoelace/dist/assets/icons/list.svg"],
+      external: ["/shoelace/dist/assets/icons/*"],
     },
   },
 });
