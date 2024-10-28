@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "quicksand";
+  src: url("./assets/font/Quicksand-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "varelaround";
+  src: url("./assets/font/VarelaRound-Regular.ttf") format("truetype");
+}
+
+html,
+body {
+  background-color: #333;
+  font-family: "varelaround";
+  color: white;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html,
+  body {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html,
+  body {
+    font-size: 9px;
+  }
+}
+
+.scroll-hint {
+  --scroll-hint: 2%;
+}
+
+.text-bold-effect {
+  font-family: "quicksand";
+  font-weight: 400;
+  transition: font-weight 1s;
+}
+
+.text-bold-effect:hover {
+  font-weight: 900;
+}
+
+/* .vertical {
+  max-height: 400px;
+} */
+
+.vertical::part(base) {
+  grid-template-areas: "slides slides pagination";
+}
+
+.vertical::part(pagination) {
+  flex-direction: column;
+}
+
+.vertical::part(navigation) {
+  transform: rotate(90deg);
+  display: flex;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.001); /* Fundo translúcido */
+  backdrop-filter: blur(10px); /* Efeito de desfoque */
+}
+
+.bg-slide {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.0001),
+      rgba(255, 255, 255, 0.0001)
+    ),
+    url("./assets/waves3.jpeg");
+  background-size: 100% 140%;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+header {
+  position: relative; /* Para posicionar o ponto corretamente */
+  padding: 20px; /* Padding para o conteúdo do header */
+  background-color: #333; /* Cor de fundo do header */
+  color: #fff; /* Cor do texto do header */
+  overflow: hidden; /* Para esconder o ponto em movimento */
+}
+
+header span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #0c002b, #1779ff);
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+header span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0c002b, #1779ff);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+header span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #0c002b, #1779ff);
+  animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+header span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #0c002b, #1779ff);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+header * sl-icon-button.icon-button-color::part(base) {
+  color: rgba(255, 255, 255, 1);
+}
