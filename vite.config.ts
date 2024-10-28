@@ -5,4 +5,9 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   plugins: [react()],
   publicDir: "public",
+  build: {
+    rollupOptions: {
+      external: ["/shoelace/dist/assets/icons/list.svg"],
+    },
+  },
 });
