@@ -97,7 +97,7 @@ function App() {
                 </span>
                 &nbsp;testada com&nbsp;
                 <span style={{ fontFamily: "varelaround", fontWeight: "bold" }}>
-                  unity e e2e tests
+                  unit e e2e tests
                 </span>
               </>
             }
